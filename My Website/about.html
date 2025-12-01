@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About- My Website</title>
+<!-- Include common CSS -->
+<style>
+/<style>
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-rows: auto 50px 1fr auto;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+    min-height: 100vh;
+}
+
+/* Header with logo */
+header {
+    grid-area: header;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+}
+
+header .logo-container {
+    display: flex;
+    align-items: center;
+}
+
+header .logo-container img {
+    height: 50px;
+    margin-right: 15px;
+}
+
+header .logo-container h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+/* Navigation */
+nav {
+    grid-area: nav;
+    background-color: #333;
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+/* Main content */
+.content {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+main {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+aside {
+    background-color: #ddd;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+    }
+
+    header .logo-container {
+        justify-content: center;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <img src="logo.png" alt="My Website Logo">
+        <h1>My Website</h1>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services Offered</a>
+    <a href="why-choose-me.html">Why Choose Me?</a>
+    <a href="contact.html">Contact</a>
+    <a href="privacy.html">Privacy Policy</a>
+</nav>
+
+<div class="content">
+    <main>
+        <h2>About</h2>
+        <p>15 years supply chain expertise</p>
+    </main>
+    <aside>
+        <h3>Sidebar</h3>
+        <p>Add links, promotions, or other info here.</p>
+    </aside>
+</div>
+
+<footer>
+    &copy; 2025 My Website. All rights reserved.
+</footer>
+
+</body>
+</html>
